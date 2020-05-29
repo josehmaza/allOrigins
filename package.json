@@ -11,8 +11,9 @@
     "eslint": "eslint -c .eslintrc.json ./app"
   },
   "dependencies": {
+    "body-parser": "^1.19.0",
     "express": "^4.17.1",
-    "got": "^9.6.0"
+    "got": "^11.1.4"
   },
   "devDependencies": {
     "eslint": "^6.6.0",

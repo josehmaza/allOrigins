@@ -5,7 +5,7 @@
  */
 
 const express = require('express')
-
+const bodyParser = require('body-parser');
 const {version} = require('./package.json')
 // yep, global. it's ok
 // https://softwareengineering.stackexchange.com/a/47926/289420
@@ -18,7 +18,8 @@ const app = express()
 app.set('case sensitive routing', false)
 app.disable('x-powered-by')
 app.use(enableCORS)
-
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 app.all('/:format', processRequest)
 
 
